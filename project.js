@@ -26,6 +26,13 @@ switch (args[0]) {
     case 'build-modules':
         buildAllModules();
         break;
+    case 'build-front':
+            buildAllModulesFront();
+            break;
+    case 'build-all':
+        buildAllModules();
+        buildAllModulesFront();
+        break;
     default:
         console.log('You should use args: init, pull, mklinks, restart-iis, build-modules commands');
 }
@@ -43,6 +50,14 @@ function buildAllModules() {
     });
 }
 
+function buildAllModulesFront() {
+    config.repositories.forEach(repository => {
+        if (repository.type === 'module') {
+            buildModuleFront(repository);
+        }
+    });
+}
+
 function buildModule(repository) {
     const repositoryPath = getRepositoryPath(repository);
             
@@ -53,6 +68,16 @@ function buildModule(repository) {
         ? chalk.green('Ok') 
         : chalk.red('Fail');
     console.log(`'${repository.name}' - restore packages: ${restoreResult}, build: ${buildResult}`);
+}
+
+function buildModuleFront(repository) {
+    const frontPath = getRepositoryFrontPath(repository);
+    if (fs.existsSync(frontPath)){
+        const buildResult = shell.exec(`cd ${frontPath} && npm ci  && npm run webpack:build`, {silent:true}).code === 0 
+        ? chalk.green('Ok') 
+        : chalk.red('Fail');
+        console.log(`'${repository.name}' - restore packages:  build: ${buildResult}`);
+	}
 }
 
 /**
@@ -129,6 +154,13 @@ function getLinkPath(modulesRoot, moduleName) {
 function getRepositoryPath(repository) {
     return path.join(config.directories.repositoriesRoot, repository.name);
 }
+
+
+function getRepositoryFrontPath(repository) {
+    return path.join(config.directories.repositoriesRoot, repository.name,
+         `src\\${repository.frontname}.Web`);
+}
+
 
 function getRepositoryUrl(repositoryUrl) {
     let url = new URL(repositoryUrl);

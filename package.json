@@ -13,6 +13,8 @@
     "mklinks": "node project.js mklinks",
     "restart-iis": "node project.js restart-iis",
     "build-modules": "node project.js build-modules",
+    "build-front": "node project.js build-front",
+    "build-all": "node project.js build-all",
     "lint": "eslint"
   },
   "author": "Vitaly.Tartynov",

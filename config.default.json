@@ -1,11 +1,12 @@
 {
     "directories": {
-        "repositoriesRoot": "D:\\Repos\\vc\\",
-        "platformModulesRoot": "D:\\Repos\\vc\\vc-platform\\VirtoCommerce.Platform.Web\\Modules\\"
+        "repositoriesRoot": "D:\\virtodev\\test\\",
+        "platformModulesRoot": "D:\\virtodev\\test\\vc-platform\\src\\VirtoCommerce.Platform.Web\\Modules\\",
+        "frontweb": "D:\\virtodev\\vc\\"
     },
 
     "build": {
-        "msbuildPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Professional\\MSBuild\\Current\\Bin\\msbuild.exe",
+        "msbuildPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\MSBuild\\Current\\Bin\\msbuild.exe",
         "nugetPath": ".\\bins\\nuget.exe"
     },
 
@@ -22,9 +23,24 @@
 
     "repositories": [
         {
+            "name": "vc-platform",
+            "type": "platform",
+            "url": "https://github.com/VirtoCommerce/vc-platform"
+        },
+        {
             "name": "vc-theme-default",
             "type": "theme",
             "url": "https://github.com/VirtoCommerce/vc-theme-default"
+        },
+        {
+            "name": "vc-odt-mpa-theme",
+            "type": "theme",
+            "url": "https://github.com/VirtoCommerce/vc-odt-mpa-theme"
+        },
+        {
+            "name": "vc-theme-material",
+            "type": "theme",
+            "url": "https://github.com/VirtoCommerce/vc-theme-material"
         },
         {
             "name": "vc-storefront-core",
@@ -32,29 +48,229 @@
             "url": "https://github.com/VirtoCommerce/vc-storefront-core"
         },
         {
+            "name": "vc-odt-storefront",
+            "type": "storefront",
+            "url": "https://github.com/VirtoCommerce/vc-odt-storefront"
+        },
+        {
+            "name": "vc-meds-storefront",
+            "type": "storefront",
+            "url": "https://github.com/VirtoCommerce/vc-meds-storefront"
+        },
+        {
+            "name": "vc-storefront-core-samples",
+            "type": "storefront",
+            "url": "https://github.com/VirtoCommerce/vc-storefront-core-samples"
+        },
+        {
             "name": "vc-module-core",
+            "frontname": "VirtoCommerce.CoreModule",
             "type": "module",
             "url": "https://github.com/VirtoCommerce/vc-module-core"
         },
         {
-            "name": "export",
+            "name": "vc-module-notification",
+            "frontname": "VirtoCommerce.NotificationsModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-notification"
+        },
+        {
+            "name": "vc-module-export",
+            "frontname": "VirtoCommerce.ExportModule",
             "type": "module",
             "url": "https://github.com/VirtoCommerce/vc-module-export"
         },
         {
-            "name": "inventory",
+            "name": "vc-module-image-tools",
+            "frontname": "VirtoCommerce.ImageToolsModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-image-tools"
+        },
+        {
+            "name": "vc-module-search",
+            "frontname": "VirtoCommerce.SearchModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-search"
+        },
+        {
+            "name": "vc-module-elastic-search",
+            "frontname": "VirtoCommerce.ElasticSearchModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-elastic-search"
+        },
+        {
+            "name": "vc-module-azure-search",
+            "frontname": "VirtoCommerce.AzureSearchModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-azure-search"
+        },
+        {
+            "name": "vc-module-inventory",
+            "frontname": "VirtoCommerce.InventoryModule",
             "type": "module",
             "url": "https://github.com/VirtoCommerce/vc-module-inventory"
         },
         {
-            "name": "store",
+            "name": "vc-module-store",
+            "frontname": "VirtoCommerce.StoreModule",
             "type": "module",
             "url": "https://github.com/VirtoCommerce/vc-module-store"
         },
         {
             "name": "vc-module-catalog",
+            "frontname": "VirtoCommerce.CatalogModule",
             "type": "module",
             "url": "https://github.com/VirtoCommerce/vc-module-catalog"
+        },
+        {
+            "name": "vc-module-content",
+            "frontname": "VirtoCommerce.ContentModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-content"
+        },
+        {
+            "name": "vc-module-customer",
+            "frontname": "VirtoCommerce.CustomerModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-customer"
+        },
+        {
+            "name": "vc-module-payment",
+            "frontname": "VirtoCommerce.Payment",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-payment"
+        },
+        {
+            "name": "vc-module-shipping",
+            "frontname": "VirtoCommerce.ShippingModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-shipping"
+        },
+        {
+            "name": "vc-module-pricing",
+            "frontname": "VirtoCommerce.PricingModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-pricing"
+        },
+        {
+            "name": "vc-module-cart",
+            "frontname": "VirtoCommerce.CartModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-cart"
+        },
+        {
+            "name": "vc-module-order",
+            "frontname": "VirtoCommerce.OrdersModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-order"
+        },
+        {
+            "name": "vc-module-marketing",
+            "frontname": "VirtoCommerce.MarketingModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-marketing"
+        },
+        {
+            "name": "vc-module-sitemaps",
+            "frontname": "VirtoCommerce.SitemapsModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-sitemaps"
+        },
+        {
+            "name": "vc-module-subscription",
+            "frontname": "VirtoCommerce.SubscriptionModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-subscription"
+        },
+        {
+            "name": "vc-module-tax",
+            "frontname": "VirtoCommerce.TaxModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-tax"
+        },
+        {
+            "name": "vc-module-customer-review",
+            "frontname": "VirtoCommerce.CustomerReviews",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-customer-review"
+        },
+        {
+            "name": "vc-module-Authorize.Net",
+            "frontname": "VirtoCommerce.AuthorizeNet",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-Authorize.Net"
+        },
+        {
+            "name": "vc-module-avatax",
+            "frontname": "AvaTax.TaxModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-avatax"
+        },
+        {
+            "name": "vc-module-catalog-personalization",
+            "frontname": "VirtoCommerce.CatalogPersonalizationModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-catalog-personalization"
+        },
+        {
+            "name": "vc-module-catalog-publishing",
+            "frontname": "VirtoCommerce.CatalogPublishingModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-catalog-publishing"
+        },
+        {
+            "name": "vc-module-pagebuilder",
+            "frontname": "VirtoCommerce.PageBuilderModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-pagebuilder"
+        },
+        {
+            "name": "vc-module-catalog-csv-import",
+            "frontname": "VirtoCommerce.CatalogCsvImportModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-catalog-csv-import"
+        },
+        {
+            "name": "vc-module-contentful",
+            "frontname": "VirtoCommerce.ContentfulModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-contentful"
+        },
+        {
+            "name": "vc-module-bulk-actions",
+            "frontname": "VirtoCommerce.BulkActionsModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-bulk-actions"
+        },
+        {
+            "name": "vc-module-quote",
+            "frontname": "VirtoCommerce.QuoteModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-quote"
+        },
+        {
+            "name": "vc-module-experience-api",
+            "frontname": "VirtoCommerce.ExperienceApiModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-experience-api"
+        },
+        {
+            "name": "vc-module-dynamic-expressions",
+            "frontname" : "VirtoCommerce.DynamicExpressionsModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-dynamic-expressions"
+        },
+        {
+            "name": "vc-module-google-ecommerce-analytics",
+            "frontname" : "VirtoCommerce.GoogleEcommerceAnalyticsModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-google-ecommerce-analytics"
+        },
+        {
+            "name": "vc-module-dynamic-associations",
+            "frontname": "VirtoCommerce.DynamicAssociationsModule",
+            "type": "module",
+            "url": "https://github.com/VirtoCommerce/vc-module-dynamic-associations"
         }
     ]
 }
